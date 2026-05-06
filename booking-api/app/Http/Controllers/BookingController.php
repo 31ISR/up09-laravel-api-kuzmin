@@ -9,7 +9,7 @@ class BookingController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         $bookings = $request->user()->bookings ()->orderBy('starts_at')->get();
         
